@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Metamask</title>
+</head>
+
+<body>
+    
+    <div class="center">
+        <div class="ust">
+            <h1>Web3 ile Ethereum Transfer İşlemleri</h1>
+            <button class="btn" onclick="connectEth()">Metamask Cüzdana Bağlan</button>
+            <br>
+            <p style="color:rgb(47, 5, 232);font-size:20px;" id="p">Henüz Bağlantı Kurulamadı</p>
+            <button class="btn" onclick="checkEthBalance()">Hesaptaki Tutar Bilgisi</button>
+            <br>
+            <p style="color:rgb(47, 5, 232);font-size:35px;" id="p2"></p>
+
+        </div>
+
+        <br>
+        <br>
+        <hr />
+
+        <div id="mydiv">
+            <h3>ETHER GÖNDERME</h3>
+            <label for="fname">Wallet Address:</label>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <br>
+            <label for="fname2">Amount (ETH)</label>
+            <input type="text" id="fname2" name="fname2">
+
+            <br>
+            <br>
+            <button class="btn" onclick="sendEther()">Ether gönder</button>
+
+
+        </div>
+        <br>
+        <br>
+        <hr />
+
+        <div id="mydiv2">
+            <h3>TOKEN İŞLEMLERI</h3>
+            <button class="btn" onclick="checkTokenBalance()">Enes Token Balance Değerini Getir</button>
+            <p style="color:rgb(47, 5, 232);font-size:35px;" id="p3"></p>
+            <label for="fname3">Token Gönderilecek Adres:</label>
+            <input type="text" id="fname3" name="fname3">
+            <br>
+            <br>
+            <label for="fname4">Gönderilecek Miktar (ETK)</label>
+            <input type="text" id="fname4" name="fname4">
+
+            <br>
+            <br>
+            <button class="btn" onclick="transferToken()">Token gönder</button>
+            <br>
+
+            <p style="color:rgb(233, 32, 39);font-size:35px;" id="p4"></p>
+
+
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</body>
+
+</html>
